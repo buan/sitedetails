@@ -1,0 +1,6 @@
+name: 'Site Details'
+type: module
+description: 'This is a module which gives information about site details'
+core: 8.x
+core_version_requirement: ^8 || ^9
+VERSION: VERSION

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * This file is used for theming purpose.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function sitedetails_theme($existing, $type, $theme, $path) {
+  return ['locationtemplate' => ['variables' => ['items' => []]]];
+}

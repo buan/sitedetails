@@ -1,0 +1,4 @@
+services:
+    sitedetails.findtime:
+        class: Drupal\sitedetails\TimeService
+        arguments: ['@config.factory']
