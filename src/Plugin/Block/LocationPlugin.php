@@ -6,6 +6,7 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\sitedetails\TimeService;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides a 'Location Details' block.
@@ -16,7 +17,6 @@ use Drupal\sitedetails\TimeService;
  * )
  */
 class LocationPlugin extends BlockBase implements ContainerFactoryPluginInterface {
-
   /**
    * Declare TimeService as variable.
    *
@@ -77,8 +77,8 @@ class LocationPlugin extends BlockBase implements ContainerFactoryPluginInterfac
   /**
    * {@inheritdoc}
    */
-  public function getCacheMaxAge() {
-    return 0;
+  public function getCacheTags() {
+    return Cache::mergeTags(parent::getCacheTags(), ['block:' . strtotime('now')]);
   }
 
 }

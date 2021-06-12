@@ -1,0 +1,6 @@
+sitedetails.admin_settings_form:  
+  title: 'Select location configuration'  
+  route_name: adminconfig.settings  
+  description: 'This form gives us country,city and timezone details'  
+  parent: system.admin_config_system  
+  weight: 99 

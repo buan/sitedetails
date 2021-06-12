@@ -5,3 +5,5 @@ adminconfig.settings:
     _title: 'Admin Configuration Form'
   requirements:
     _permission: 'administer site configuration'
+  options:  
+    _admin_route: TRUE 

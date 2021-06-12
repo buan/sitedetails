@@ -43,12 +43,14 @@ class AdminConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Country'),
       '#default_value' => $config->get('country'),
+      '#required' => TRUE,
     ];
 
     $form['city'] = [
       '#type' => 'textfield',
       '#title' => $this->t('City'),
       '#default_value' => $config->get('city'),
+      '#required' => TRUE,
     ];
 
     // The values for the dropdown box.
@@ -68,6 +70,8 @@ class AdminConfigurationForm extends ConfigFormBase {
       '#title' => $this->t('Time Zone List'),
       '#type' => 'select',
       '#options' => $form['timezoneoptions']['#value'],
+      '#required' => TRUE,
+      '#default_value' => $config->get('timezone'),
     ];
 
     return parent::buildForm($form, $form_state);
